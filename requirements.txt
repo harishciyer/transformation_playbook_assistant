@@ -10,4 +10,4 @@ faiss-cpu
 groq
 langchain-groq
 openpyxl
-
+setuptools
