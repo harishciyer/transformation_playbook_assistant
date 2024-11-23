@@ -121,7 +121,7 @@ if st.button('Start Analysis'):
     # Kick off the crew's work and capture results
     results = crew.kickoff()
 
-    strategic_readiness = investigate_strategic_readiness.output.raw
+    strategic_readiness = investigate_strategic_readiness.output.raw_output
     
     usecase_readiness_investigator = Agent(
         role='Investigating use case readiness',
@@ -156,7 +156,7 @@ if st.button('Start Analysis'):
 
     results = crew.kickoff()
 
-    usecase_readiness = investigate_usecase_readiness.output.raw
+    usecase_readiness = investigate_usecase_readiness.output.raw_output
 
     architecture_readiness_investigator = Agent(
         role='Investigating architecture readiness',
@@ -191,7 +191,7 @@ if st.button('Start Analysis'):
 
     results = crew.kickoff()
 
-    architecture_readiness = investigate_architecture_readiness.output.raw
+    architecture_readiness = investigate_architecture_readiness.output.raw_output
     
 
     talent_readiness_investigator = Agent(
@@ -227,7 +227,7 @@ if st.button('Start Analysis'):
 
     results = crew.kickoff()
 
-    talent_readiness = investigate_talent_readiness.output.raw
+    talent_readiness = investigate_talent_readiness.output.raw_output
     
     readiness_summarizer = Agent(
         role='Summarize generative ai readiness across dfferent dimensions',
@@ -267,8 +267,8 @@ if st.button('Start Analysis'):
     results = crew.kickoff()
 
     st.markdown('**Generative AI Readiness Assessment**')
-    assessment = summarize_readiness.output.raw
-    st.write(summarize_readiness.output.raw)
+    assessment = summarize_readiness.output.raw_output
+    st.write(summarize_readiness.output.raw_output)
 
     # create a digital vision based on company description, and readiness assessment
 
@@ -375,27 +375,27 @@ if st.button('Start Analysis'):
 
     st.markdown('**Digital Vision**')
 
-    digital_vision = create_digital_vision.output.raw
+    digital_vision = create_digital_vision.output.raw_output
 
-    st.write(create_digital_vision.output.raw)
+    st.write(create_digital_vision.output.raw_output)
 
     st.markdown('**Use Cases**')
 
-    use_cases = develop_use_cases.output.raw
+    use_cases = develop_use_cases.output.raw_output
 
-    st.write(develop_use_cases.output.raw)
+    st.write(develop_use_cases.output.raw_output)
 
     st.markdown('**Digital Architecture Recommendations**')
 
-    digital_architecture_recommendations = optimize_digital_architecture.output.raw
+    digital_architecture_recommendations = optimize_digital_architecture.output.raw_output
 
-    st.write(optimize_digital_architecture.output.raw)
+    st.write(optimize_digital_architecture.output.raw_output)
 
     st.markdown('**Human Readiness Recommendations**')
 
     human_readiness_recommendations = improve_human_readiness.output.raw
 
-    st.write(improve_human_readiness.output.raw)
+    st.write(improve_human_readiness.output.raw_output)
 
 else:
     st.write('Please click the button to start the analysis')
