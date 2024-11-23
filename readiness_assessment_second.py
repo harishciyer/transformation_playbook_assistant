@@ -393,7 +393,7 @@ if st.button('Start Analysis'):
 
     st.markdown('**Human Readiness Recommendations**')
 
-    human_readiness_recommendations = improve_human_readiness.output.raw
+    human_readiness_recommendations = improve_human_readiness.output.raw_output
 
     st.write(improve_human_readiness.output.raw_output)
 
