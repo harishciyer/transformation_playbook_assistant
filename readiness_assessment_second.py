@@ -354,10 +354,10 @@ if st.button('Start Analysis'):
     # Create tasks for the agents
 
     improve_human_readiness = Task(
-        description=f"""Generate maximum two specific recommendations on how to improve human readiness based on the provided company information and the generative ai readiness assessment
-        in order to realize the digital vision, which is proposed by the digital_vision_agent and implement the use cases, which are proposed by the usecase_development_agent. 
-        Here is a description of the company: {company_description}. Here is a description of the current Generative AI readiness: {talent_readiness}.""",
-        expected_output='As output, you provide specific recommendations on how to improve human readiness based on the provided company information and the generative ai readiness assessment.',
+        description=f"""Generate a maximum of two specific recommendations on how to improve **human readiness** for generative AI. Focus strictly on improving employee skills, fostering a positive culture towards generative AI, and creating an environment that encourages experimentation and innovation.
+        Here is a description of the company: {company_description}.
+        Here is a description of the current Generative AI readiness: {talent_readiness}.""",
+        expected_output="""As output, provide two actionable recommendations aimed at improving human readiness. Focus on training, cultural shifts, leadership involvement, and skills development. Avoid mentioning technical infrastructure or digital architecture.""",
         agent=improve_human_readiness_agent
     )
 
